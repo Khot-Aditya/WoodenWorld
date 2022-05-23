@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+}
+
+.category-name {
+  @apply text-sm text-center mt-5;
+}
+
+.row {
+  @apply flex flex-col lg:flex-row w-full max-w-5xl py-5 items-center justify-between;
+}
+
+.category-icon {
+  @apply w-16 h-16;
+}
+
+.category {
+  @apply w-fit h-fit flex items-center justify-center flex-col hover:text-accent-600 hover:fill-accent-600 transition-colors duration-300 ease-in-out;
+}
+
+.my-nav-menu {
+  @apply nav-item nav-link block pr-2 lg:px-2 py-2 text-gray-800 hover:text-accent-600  text-sm xl:text-base
+  focus:text-accent-600 transition duration-150 ease-in-out;
+}
+i {
+  @apply flex items-center;
+}
