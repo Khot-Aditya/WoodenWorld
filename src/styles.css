@@ -7,6 +7,24 @@ html {
   font-weight: 500;
 }
 
+.hr{
+  @apply ml-9 mr-16 border-gray-100
+}
+.list{
+  @apply py-3 pl-8 pr-5  flex justify-between items-center
+}
+.list-hover{
+  @apply hover:bg-gray-100 py-3 mx-5 px-5 rounded-lg cursor-pointer flex 
+}
+
+.list-hover i{
+  @apply invisible
+}
+
+.list-hover:hover i{
+  @apply visible
+}
+
 .category-name {
   @apply text-sm text-center mt-5;
 }

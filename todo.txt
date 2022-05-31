@@ -5,7 +5,7 @@ Todo
     -responsive search button
     -sign in / sign up actions
     -replace sign in / sign up with account button
-
+    - MIN ORDER CANCEL PERIOD
 
 Json structure
     [
@@ -48,6 +48,102 @@ Json structure
     ]
 
 
+
+
+DATABASE
+
+    USERS_CREDENTIALS
+        -username
+        -password
+        -type
+        -CONTACT
+   
+    ADMIN
+        -index
+        -company name
+        -company logo
+        -fax
+        -gst
+        -CONTACT
+        -ADDRESS
+        -USERS_CREDENTIALS
+
+    CUSTOMERS
+        -index
+        -CONTACT
+        -ADDRESS
+        -USERS_CREDENTIALS
+        -products
+        -quantity
+
+    CONTACT
+        -name
+        -phone
+        -email
+    
+    ADDRESS
+        -index
+        -address
+        -pincode
+        -city
+        -state
+        -CONTACT
+
+    PRODUCTS
+        -index
+        -name
+        -description
+        -image
+        -price
+        -CATEGORY
+        -STYLE
+        -
+
+    DETAILS
+        -index
+        -BRAND
+        -width
+        -height
+        -depth
+
+    STYLE
+        -index
+        -style
+
+    MATERIAL
+        -index 
+        -material
+
+    
+
+
+    - Products
+        int         id 
+        string      name    
+        string      description
+        string      image
+        float       price
+        string      category
+        string      style
+        string      date
+        float       offer
+        Details     details
+        string      tags
+        float       rating
+
+    - Details
+        int         id
+        string      brand
+        float       weight
+        string      room
+        Dimension   dimension
+        int         warranty
+        string      material
+        float       height
+        float       width
+        float       depth
+
+
 Database Tables  
     Products
     Brand
@@ -61,15 +157,7 @@ brand
 category
 transaction
 
-    ADMIN
-        id
-        company name
-        company logo (other images)
-        fax
-        gst number
-        email
-        address
-        phone
+
      
     
     OFFERS
@@ -113,42 +201,9 @@ transaction
 
 
 Database Model
-    - Products
-        int         id 
-        string      name    
-        string      description
-        string      image
-        float       price
-        string      category
-        string      style
-        string      date
-        float       offer
-        Details     details
-        string      tags
-        float       rating
 
-    - Details
-        int         id
-        string      brand
-        float       weight
-        string      room
-        Dimension   dimension
-        int         warranty
-        string      material
-        float       height
-        float       width
-        float       depth
 
-    - Users
-        int         id
-        string      name
-        username    string
-        password    string
-        email       string
-        phone       string
-        address     string
-        wishList    string 
-        cart        string
+
 
 
 
@@ -377,18 +432,88 @@ Cabinetry
     Table Lamps
     Kids Lighting
 
-Appliances
-    Mixers & Processors
-    Breakfast Appliances
-    Chimneys
-    Built-in Appliances
-    Heating & Cooling Appliances
-    Cleaning
-    Refrigerators
-    OTGs
-    Food Makers
-    Cooktops
-    Bar Appliances
-    Purifiers
-    Laundry
-    Televisions
+    -Trending
+        -Best Sellers
+        -New Releases
+
+    - Category
+        Sofa
+        Bed
+        Dining
+        Tv Units
+        Mattress
+        seating
+        coffee table
+        cupboards
+        reclinears
+        storage
+        study tables
+        bookshelves 
+        shoe racks 
+        decor 
+        other
+
+    -Cabinetry
+        -Wardrobes
+        -Shoe Racks
+        -Storage
+        -Entertainment Units
+        -Bar
+        -Kids Storage
+        -Lighting
+        -Floor Lamps
+        -Chandeliers
+        -Wall Lights
+        -Smart Lights
+        -Festive Lights
+        -Lampshades
+        -Ceiling Lights
+        -LED Lights
+        -Outdoor Lights
+        -Table Lamps
+        -Kids Lighting
+
+    -Beds
+        -By Size
+        -By Storage
+        -Kids & Teens
+        -By Material
+        -By Style
+        -Mattresses
+        -Furnishings
+        -Bed Linen
+        -Blankets & Comforters
+        -Carpets
+        -Curtains
+        -Cushion & Covers
+        -Bath Linen
+        -Kids Furnishings
+        -Home Services
+        -Flooring
+        -Table Linen
+        -Essentials
+
+    -Sofas & Recliners
+        -By Size
+        -By Type
+        -By Style
+        -By Material
+        -Sofa Chairs
+        -Décor
+        -Wall Shelves & Cabinets
+        -Clocks
+        -Wall Art
+        -Table Décor
+        -Spiritual
+        -Home Garden
+        -Tableware
+        -Kids Décor
+        -Mirrors
+        -Photo Frames
+        -Accent Furniture
+
+
+    -Help & Settings
+        -Your Account
+        -Customer Service
+        -Sign in
