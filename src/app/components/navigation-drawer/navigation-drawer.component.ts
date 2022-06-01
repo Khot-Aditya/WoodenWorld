@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationDrawerComponent implements OnInit {
 
-  furnitureArray: string[];
- 
+  signedIn: boolean = true;
 
   constructor() {
-    this.furnitureArray = [
+  }
+
+  ngOnInit(): void {
+  }
+
+  getAccountInfo() {
+    return JSON.parse('{ "name":"Aditya Khot", "avatar":"https://avatars.githubusercontent.com/u/66156452?v=4" }');
+  }
+
+  getFurnitureArray() {
+    return [
       "Sofa Chairs",
       "Dining Tables",
       "Mattresses",
@@ -29,11 +38,5 @@ export class NavigationDrawerComponent implements OnInit {
       "Wardrobes",
       "Other"
     ]
-
-
   }
-
-  ngOnInit(): void {
-  }
-
 }

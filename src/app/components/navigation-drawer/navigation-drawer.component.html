@@ -5,19 +5,21 @@
     <div class="py-3 px-6 bg-gray-700 flex justify-between items-center">
 
 
-        <a href="#!">
-            <div class="flex items-center">
-                <div class="shrink-0">
-                    <!-- <img src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp" class="rounded-full w-10"
-                        alt="Avatar" /> -->
 
-                    <i class="fi fi-br-user text-2xl text-gray-600 rounded-full bg-gray-50 p-3"></i>
-                </div>
-                <div class="grow ml-3">
-                    <p class="text-base font-light text-gray-100 ">Hello, Sign in</p>
-                </div>
+        <div class="flex items-center">
+            <div class="shrink-0 rounded-full bg-gray-50">
+                <img [src]="getAccountInfo().avatar" class="rounded-full w-12" alt="Avatar" *ngIf="signedIn" />
+
+                <i class="fi fi-br-user text-2xl text-gray-600 p-3" *ngIf="!signedIn"></i>
             </div>
-        </a>
+            <div class="grow ml-3">
+                <p class="text-base font-light text-gray-100" *ngIf="!signedIn">
+                    <a href="#">Hello, Sign in</a>
+                </p>
+                <p class="text-base font-light text-gray-100" *ngIf="signedIn">{{getAccountInfo().name}}</p>
+            </div>
+        </div>
+
 
         <i class="fi fi-br-cross text-white text-sm p-2 hover:text-gray-300 cursor-pointer active:text-accent-600"
             data-bs-dismiss="offcanvas" aria-label="Close"></i>
@@ -36,7 +38,7 @@
             <li class="list-hover">
                 <i class="fi fi-br-crown mr-2 !visible"></i>Best Sellers
             </li>
-            
+
             <li class="list-hover">
                 <i class="fi fi-br-star-octogram mr-2 !visible"></i>New Releases
             </li>
@@ -44,18 +46,16 @@
         <hr class="my-2" />
 
         <ul class="text-sm font-normal py-3">
-            <li class="list" >
+            <li class="list">
                 <h2 class="text-xl font-medium">
                     Furniture
                 </h2>
                 <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
             </li>
-            <li *ngFor="let furniture of furnitureArray">
-                <a href="#{{furniture}}" class="list-hover justify-between text-base">
-
+            <li *ngFor="let furniture of getFurnitureArray()">
+                <a href="#{{furniture}}" class="list-hover justify-between text-sm">
                     {{furniture}} <i class="fi fi-br-caret-right"></i>
                 </a>
-                
             </li>
         </ul>
         <hr class="my-2" />
@@ -70,11 +70,11 @@
             <li class="list-hover justify-between">
                 Your Account <i class="fi fi-br-caret-right"></i>
             </li>
-            
+
             <li class="list-hover justify-between">
                 Customer Service <i class="fi fi-br-caret-right"></i>
             </li>
-            
+
             <li class="list-hover justify-between">
                 Sign in <i class="fi fi-br-caret-right"></i>
             </li>
