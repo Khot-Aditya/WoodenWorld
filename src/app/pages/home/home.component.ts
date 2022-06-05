@@ -36,6 +36,19 @@ export class HomeComponent implements OnInit {
     return scroll - offset + 1000;
   }
 
+  scrollRight(div:any){
+
+  }
+
+  getList(){
+    return [
+      "Best Sellers",
+      "New Arrivals",
+      "Sofa Chairs",
+      "Dining Tables"
+    ];
+  }
+
   getBestSellers(){
     return [
       "1",

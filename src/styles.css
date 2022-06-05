@@ -8,12 +8,20 @@ html {
   @apply overflow-x-hidden;
 }
 
+.scroll-snap{
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-button {
+  @apply w-10 h-10 cursor-pointer text-black hover:text-white hover:bg-accent-600 m-3 rounded-full flex items-center justify-center transition duration-150 ease-in-out;
+}
+
 .carousel-items {
   @apply min-w-[10rem] lg:min-w-[24rem] h-24 lg:h-60 rounded;
 }
 
 .carousel-container {
-  @apply flex overflow-x-hidden space-x-5 my-5 scroll-auto;
+  @apply flex overflow-x-hidden space-x-5 my-5 scroll-smooth;
 }
 
 .mesh {

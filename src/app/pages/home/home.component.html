@@ -70,6 +70,34 @@
     </div>
 </div>
 
+<!-- carousel section -->
+<section class="min-h-fit">
+
+    <div class="carousel-container" [scrollLeft]="onWindowScroll(div1)" #div1>
+
+        <div *ngFor="let url of getImages()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+    <div class="carousel-container" [scrollLeft]="-onWindowScroll(div2) + 1500" #div2>
+
+        <div *ngFor="let url of getImages2()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+    <div class="carousel-container" [scrollLeft]="onWindowScroll(div3)" #div3>
+
+        <div *ngFor="let url of getImages3()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+
+
+</section>
+
 <!-- category section -->
 <section class="w-full min-h-fit border bg-gray-50 py-5 lg:px-10 flex flex-row lg:flex-col justify-center items-center">
     <div class="categories row">
@@ -384,47 +412,37 @@
 </section>
 
 
-<!-- carousel section -->
-<section class="min-h-screen pt-20">
 
-    <div class="carousel-container" [scrollLeft]="onWindowScroll(div1)" #div1>
+<!-- home page offers -->
+<section class="min-h-fit w-full py-10" *ngFor="let list of getList()">
 
-        <div *ngFor="let url of getImages()">
-            <img [src]="url" alt="" class="carousel-items">
+    <div class="flex justify-between items-center pl-16 pr-5">
+        <h2 class="text-4xl font-sans font-bold">
+            {{list}}
+            <div class="h-[2px] rounded-full w-4/5 bg-gradient-to-r from-slate-400 mt-2"></div>
+        </h2>
+
+        <div class="flex items-center">
+            <div class="scroll-button"
+                (click)="carouselScroll.scrollTo({ left: (carouselScroll.scrollLeft - 400), behavior: 'smooth' })">
+                <i class="fi fi-br-angle-left"></i>
+            </div>
+
+
+            <div class="scroll-button"
+                (click)="carouselScroll.scrollTo({ left: (carouselScroll.scrollLeft + 400), behavior: 'smooth' })">
+                <i class="fi fi-br-angle-right"></i>
+            </div>
+
+            <a routerLink="#" class="hover:text-blue-800 cursor-pointer border px-2 py-1 rounded flex">
+                View more <i class="fi fi-br-arrow-right ml-3 text-xs"></i>
+            </a>
         </div>
-
-    </div>
-    <div class="carousel-container" [scrollLeft]="-onWindowScroll(div2) + 1500" #div2>
-
-        <div *ngFor="let url of getImages2()">
-            <img [src]="url" alt="" class="carousel-items">
-        </div>
-
-    </div>
-    <div class="carousel-container" [scrollLeft]="onWindowScroll(div3)" #div3>
-
-        <div *ngFor="let url of getImages3()">
-            <img [src]="url" alt="" class="carousel-items">
-        </div>
-
     </div>
 
+    <div class="w-full h-fit flex overflow-x-hidden px-10 scroll-snap" #carouselScroll>
 
-</section>
-
-
-<!-- best sellers -->
-<!-- new arrivals -->
-<!-- Sofa chairs -->
-<!-- Dining tables -->
-<section class="min-h-screen border">
-    <h2>
-        Best Sellers
-    </h2>
-
-    <div class="border w-full h-fit flex relative overflow-x-scroll">
-
-        <div class="min-w-[24rem] shadow-lg h-96 m-5 " *ngFor="let card of getBestSellers()">
+        <div class="min-w-[24rem] m-5 cursor-pointer" *ngFor="let card of getBestSellers()">
             <div class="relative">
                 <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                     alt="" class="w-96 h-64 object-cover object-center rounded-t-lg">
@@ -433,9 +451,8 @@
                     Best Seller
                 </span>
 
-
                 <ul class="flex bg-white absolute bottom-0 right-0 py-1 px-2 rounded-full m-2 space-x-1">
-                    <li>    
+                    <li>
                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
                             class="w-4 text-yellow-500 " role="img" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 576 512">
@@ -482,18 +499,32 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="rounded-b-lg border min-h-fit px-4 py-2">
+
+                <h5 class="text-gray-900 text-xl font-medium mb-1">
+                    Kaylee 3 Seater Velvet Sofa In Blush Pink Color (40% off)
+                </h5>
+                <p class="text-violet-700 text-xs mb-1">By CasaCraft</p>
+                <p class="font-sans">₹ 52,920
+                    <span class="text-xs text-green-700 font-sans">
+                        Save ₹ 35,079
+                        <span class="line-through text-gray-500 ">MRP ₹ 87,999</span>
+                    </span>
+                </p>
+
+
+                <div class="flex space-x-3 mb-2 mt-2">
+                    <button class="w-full h-fit text-center py-2 border rounded text-accent-600 hoverbg-gray-50">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
         </div>
 
 
     </div>
 </section>
-
-
-
-
-
-
-
 
 <!-- testimonials -->
 <section class="bg-gray-50 min-h-fit py-20 px-10">
