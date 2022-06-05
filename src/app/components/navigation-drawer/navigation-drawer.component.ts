@@ -19,7 +19,7 @@ export class NavigationDrawerComponent implements OnInit {
     return JSON.parse('{ "name":"Aditya Khot", "avatar":"https://avatars.githubusercontent.com/u/66156452?v=4" }');
   }
 
-  getFurnitureArray() {
+  getFurnitureArray():string[] {
     return [
       "Sofa Chairs",
       "Dining Tables",
@@ -28,7 +28,7 @@ export class NavigationDrawerComponent implements OnInit {
       "Entertainment Units",
       "Coffee Table",
       "Wardrobes",
-      "Reclinears",
+      "Recliners",
       "Seating",
       "Study Tables",
       "Kids Storage",

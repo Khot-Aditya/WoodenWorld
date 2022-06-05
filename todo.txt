@@ -62,7 +62,6 @@ DATABASE
         -index
         -company name
         -company logo
-        -fax
         -gst
         -CONTACT
         -ADDRESS
@@ -77,6 +76,7 @@ DATABASE
         -quantity
 
     CONTACT
+        -contact_id
         -name
         -phone
         -email
@@ -97,14 +97,13 @@ DATABASE
         -price
         -CATEGORY
         -STYLE
-        -
-
-    DETAILS
-        -index
+        -tags
+        -date
+        -OFFERS
         -BRAND
         -width
         -height
-        -depth
+        -length
 
     STYLE
         -index
@@ -112,22 +111,20 @@ DATABASE
 
     MATERIAL
         -index 
-        -material
+        -name
+
+    OFFERS
+        -index
+        -name
+        -description
+        -CATEGORY
+        -offer
 
     
 
 
     - Products
-        int         id 
-        string      name    
-        string      description
-        string      image
-        float       price
-        string      category
-        string      style
-        string      date
-        float       offer
-        Details     details
+
         string      tags
         float       rating
 

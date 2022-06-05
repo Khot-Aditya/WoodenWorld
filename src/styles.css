@@ -5,24 +5,36 @@
 html {
   font-family: "Sora", sans-serif;
   font-weight: 500;
+  @apply overflow-x-hidden;
 }
 
-.hr{
-  @apply ml-9 mr-16 border-gray-100
-}
-.list{
-  @apply py-3 pl-8 pr-5  flex justify-between items-center
-}
-.list-hover{
-  @apply hover:bg-gray-100 py-3 mx-5 px-5 rounded-lg cursor-pointer flex 
+.carousel-items {
+  @apply min-w-[10rem] lg:min-w-[24rem] h-24 lg:h-60 rounded;
 }
 
-.list-hover i{
-  @apply invisible
+.carousel-container {
+  @apply flex overflow-x-hidden space-x-5 my-5 scroll-auto;
 }
 
-.list-hover:hover i{
-  @apply visible
+.mesh {
+  @apply bg-gradient-to-br from-[#d0f8ff] via-[#f2fdff] to-[#d0f8ff];
+}
+.hr {
+  @apply ml-9 mr-16 border-gray-100;
+}
+.list {
+  @apply py-3 pl-8 pr-5  flex justify-between items-center;
+}
+.list-hover {
+  @apply hover:bg-gray-100 py-3 mx-5 px-5 rounded-lg cursor-pointer flex;
+}
+
+.list-hover i {
+  @apply invisible;
+}
+
+.list-hover:hover i {
+  @apply visible;
 }
 
 .category-name {
@@ -34,11 +46,11 @@ html {
 }
 
 .category-icon {
-  @apply w-16 h-16;
+  @apply w-20 lg:w-16 h-auto;
 }
 
 .category {
-  @apply w-fit h-fit flex items-center justify-center flex-col hover:text-accent-600 hover:fill-accent-600 transition-colors duration-300 ease-in-out;
+  @apply w-fit h-fit flex items-center justify-center flex-col hover:text-accent-600 hover:fill-accent-600 transition-colors duration-300 ease-in-out my-5 lg:my-0;
 }
 
 .my-nav-menu {

@@ -1,14 +1,14 @@
 <!-- change show class to invisiable after debuging -->
-<div class="offcanvas offcanvas-start fixed bottom-0 flex flex-col max-w-full bg-white show bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-accent-600 top-0 left-0 border-none w-96"
+<div class="offcanvas offcanvas-start fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-accent-600 top-0 left-0 border-none w-96"
     tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <!-- head -->
-    <div class="py-3 px-6 bg-gray-700 flex justify-between items-center">
+    <div class="py-2 px-4 bg-gray-700 flex justify-between items-center">
 
 
 
         <div class="flex items-center">
             <div class="shrink-0 rounded-full bg-gray-50">
-                <img [src]="getAccountInfo().avatar" class="rounded-full w-12" alt="Avatar" *ngIf="signedIn" />
+                <img [src]="getAccountInfo().avatar" class="rounded-full w-11" alt="Avatar" *ngIf="signedIn" />
 
                 <i class="fi fi-br-user text-2xl text-gray-600 p-3" *ngIf="!signedIn"></i>
             </div>
@@ -21,8 +21,14 @@
         </div>
 
 
-        <i class="fi fi-br-cross text-white text-sm p-2 hover:text-gray-300 cursor-pointer active:text-accent-600"
-            data-bs-dismiss="offcanvas" aria-label="Close"></i>
+        <div class="flex">
+            <i
+                class="fi fi-br-settings text-white text-lg p-2  hover:text-gray-300 cursor-pointer active:text-accent-600"></i>
+            <div class="w-[1px] bg-gray-500 mx-2"></div>
+            <i class="fi fi-br-cross text-white text-sm p-2 hover:text-gray-300 cursor-pointer active:text-accent-600"
+                data-bs-dismiss="offcanvas" aria-label="Close"></i>
+        </div>
+
     </div>
 
     <!-- body -->
@@ -76,7 +82,7 @@
             </li>
 
             <li class="list-hover justify-between">
-                Sign in <i class="fi fi-br-caret-right"></i>
+                <span [innerHTML]="signedIn? 'Sign out' : 'Sign in'"></span> <i class="fi fi-br-caret-right"></i>
             </li>
         </ul>
 

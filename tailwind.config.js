@@ -32,7 +32,7 @@ module.exports = {
         },
       },
       animation: {
-        "fade-in-out": "fade_in_out 6s linear infinite",
+        "fade-in-out": "fade_in_out 5s linear infinite",
       },
     },
   },

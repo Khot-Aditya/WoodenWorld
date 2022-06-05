@@ -1,9 +1,10 @@
-
 <!-- hero section -->
-<section class="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center pb-20 lg:py-0">
-    <div class="lg:w-2/3 flex-col w-full min-h-full flex items-center justify-center mt-32 lg:mt-0">
+<section class="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center pb-20 lg:py-0 mesh">
+    <div class="lg:w-2/3 flex-col w-full min-h-full flex items-center justify-center mt-32 lg:mt-0 ">
         <div class="pl-10 lg:ml-12">
-            <h1 class="text-6xl lg:text-7xl text-gray-900 font-extrabold">
+
+
+            <h1 class="text-6xl lg:text-7xl text-gray-900 font-extrabold ">
                 <span class="text-accent-500">Welcome</span> To <br />
                 Wooden World
             </h1>
@@ -22,22 +23,55 @@
         </div>
     </div>
 
-    <div class="lg:w-1/2 w-full min-h-full flex items-center justify-center mt-32 lg:mt-0">
-        <img src="../../../assets/images/decor/Vector.svg" alt="" class="w-4/5 h-4/5 lg:w-4/5 lg:h-2/3 max-w-lg" />
+    <div class="lg:w-1/2 w-full min-h-full flex items-center justify-center mt-32 lg:mt-0 ">
 
-        <img src="../../../assets/images/sofa-chair-1.png" alt="" class="w-80 lg:w-96 absolute animate-fade-in-out overflow-hidden" />
+        <svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="w-4/5 h-4/5 lg:w-4/5 lg:h-2/3 max-w-lg">
+            <path
+                d="M841.207 56.5751C933.029 107.414 1009.55 193.648 1048.72 294.683C1087.29 395.719 1088.51 511.555 1061.58 614.521C1035.26 717.487 980.776 808.225 915.889 890.598C850.389 972.97 774.483 1048.26 686.946 1071.43C598.796 1094.6 499.016 1066.28 394.951 1039.9C290.886 1013.51 183.148 989.059 115.199 920.2C47.251 851.986 19.7044 738.723 6.84925 625.461C-6.00586 512.199 -4.16944 398.293 42.3538 312.059C88.2649 225.181 178.863 165.333 268.849 113.85C358.222 62.3668 447.596 19.25 545.539 5.09217C643.483 -9.06562 749.997 5.73571 841.207 56.5751Z"
+                fill="url(#paint0_linear_8_5)" />
+            <path
+                d="M841.207 56.5751C933.029 107.414 1009.55 193.648 1048.72 294.683C1087.29 395.719 1088.51 511.555 1061.58 614.521C1035.26 717.487 980.776 808.225 915.889 890.598C850.389 972.97 774.483 1048.26 686.946 1071.43C598.796 1094.6 499.016 1066.28 394.951 1039.9C290.886 1013.51 183.148 989.059 115.199 920.2C47.251 851.986 19.7044 738.723 6.84925 625.461C-6.00586 512.199 -4.16944 398.293 42.3538 312.059C88.2649 225.181 178.863 165.333 268.849 113.85C358.222 62.3668 447.596 19.25 545.539 5.09217C643.483 -9.06562 749.997 5.73571 841.207 56.5751Z"
+                fill="url(#paint1_linear_8_5)" />
+            <defs>
+                <linearGradient id="paint0_linear_8_5" x1="1134" y1="625" x2="273.5" y2="-301"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4E22FF" />
+                    <stop offset="1" stop-color="#4AF4FF" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_8_5" x1="1407.5" y1="-559.5" x2="-270" y2="427"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0.259986" stop-color="#35FFF3" />
+                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <img src="../../../assets/images/sofa-chair-1.png" alt="" class="w-80 lg:w-96 absolute animate-fade-in-out" />
     </div>
-    <div class="absolute bottom-5 flex flex-col items-center">
+
+    <div class="hidden lg:absolute bottom-5 lg:flex flex-col items-center">
 
         <span class="text-2xl font-serif text-gray-800 font-[700]">
             Explore Our Furniture Range
         </span>
-        <div class="w-1/2 bg-gray-400 text-[] h-px mt-2"></div>
+        <div class="w-1/2 bg-gray-400 h-px mt-2"></div>
     </div>
 </section>
 
+<div class="lg:hidden flex flex-col items-center mb-5">
+
+    <div class="w-fit flex flex-col items-center justify-center ">
+        <span class="text-2xl font-serif text-gray-800 font-[700]">
+            Explore Our Furniture Range
+        </span>
+        <div class="w-1/2 bg-gray-400 h-px mt-2"></div>
+
+    </div>
+</div>
+
 <!-- category section -->
-<section class="w-full min-h-fit bg-gray-100 py-5 lg:px-10 flex flex-row lg:flex-col justify-center items-center">
+<section class="w-full min-h-fit border bg-gray-50 py-5 lg:px-10 flex flex-row lg:flex-col justify-center items-center">
     <div class="categories row">
         <a class="category" href="/sofa-set?src=explore_categories">
             <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 30 30" class="category-icon">
@@ -350,100 +384,211 @@
 </section>
 
 
-<!-- carasol section -->
-<section class="min-h-screen">
+<!-- carousel section -->
+<section class="min-h-screen pt-20">
+
+    <div class="carousel-container" [scrollLeft]="onWindowScroll(div1)" #div1>
+
+        <div *ngFor="let url of getImages()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+    <div class="carousel-container" [scrollLeft]="-onWindowScroll(div2) + 1500" #div2>
+
+        <div *ngFor="let url of getImages2()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+    <div class="carousel-container" [scrollLeft]="onWindowScroll(div3)" #div3>
+
+        <div *ngFor="let url of getImages3()">
+            <img [src]="url" alt="" class="carousel-items">
+        </div>
+
+    </div>
+
 
 </section>
 
 
-<!-- product grid section -->
-<section class="overflow-hidden text-gray-700">
-    <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
-        <div class="flex flex-wrap -m-1 md:-m-2">
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744888344-493238951221?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1517705008128-361805f42e86?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087" />
-                </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744888344-493238951221?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1517705008128-361805f42e86?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087" />
-                </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744888344-493238951221?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1605774337664-7a846e9cdf17?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074" />
-                </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-                <div class="w-full p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170" />
-                </div>
-                <div class="w-1/2 p-1 md:p-2">
-                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded"
-                        src="https://images.unsplash.com/photo-1517705008128-361805f42e86?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087" />
-                </div>
+<!-- best sellers -->
+<!-- new arrivals -->
+<!-- Sofa chairs -->
+<!-- Dining tables -->
+<section class="min-h-screen border">
+    <h2>
+        Best Sellers
+    </h2>
+
+    <div class="border w-full h-fit flex relative overflow-x-scroll">
+
+        <div class="min-w-[24rem] shadow-lg h-96 m-5 " *ngFor="let card of getBestSellers()">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="" class="w-96 h-64 object-cover object-center rounded-t-lg">
+
+                <span class="px-3 py-1 text-white bg-red-600 m-2 rounded absolute font-sans text-sm top-0 left-0">
+                    Best Seller
+                </span>
+
+
+                <ul class="flex bg-white absolute bottom-0 right-0 py-1 px-2 rounded-full m-2 space-x-1">
+                    <li>    
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                            class="w-4 text-yellow-500 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                            class="w-4 text-yellow-500 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                            class="w-4 text-yellow-500 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                            class="w-4 text-yellow-500 " role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                            class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                            </path>
+                        </svg>
+                    </li>
+                </ul>
             </div>
         </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- testimonials -->
+<section class="bg-gray-50 min-h-fit py-20 px-10">
+
+    <div class="flex flex-col items-center mb-14">
+
+        <div class="w-fit flex flex-col items-center justify-center ">
+            <span class="text-3xl md:text-4xl font-serif text-gray-800 font-[700]">
+                Their Words, Our Pride
+            </span>
+            <p class="text-gray-600 text-base font-sans">Happy Words of our Happy Customers</p>
+            <div class="w-1/2 bg-gray-400 h-px mt-2"></div>
+
+        </div>
+    </div>
+
+    <div class="w-full flex flex-wrap justify-center">
+        <div class="flex flex-col w-96 rounded-lg bg-white shadow-lg m-5"
+            *ngFor="let testimonials of getTestimonials()">
+            <div class="w-96 h-80 relative text-white">
+                <img class="w-96 h-80 absolute object-cover rounded-t-lg" src="{{testimonials.imageUrl}}" alt="" />
+
+                <span
+                    class="absolute bottom-0 right-0 text-sm m-3 py-2 px-4 border-2 rounded-full flex items-center cursor-pointer hover:bg-white hover:text-gray-800 hover:border-white transition duration-150 ease-in-out backdrop-blur-sm ">
+                    View Product
+                    <i class="fi fi-br-angle-right text-xs ml-2"></i>
+                </span>
+            </div>
+
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">{{testimonials.title}}</h5>
+
+                <div class="mb-1 space-x-2 flex items-center">
+
+                    <ul class="inline-flex">
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                </path>
+                            </svg>
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 text-sm">5.0 of 5 ratings</p>
+                </div>
+
+
+                <p class="text-accent-600 text-xs mb-1"> Verified Purchase</p>
+                <p class="text-gray-700 text-base mb-4 font-sans">
+                    {{testimonials.description}}
+                    <a routerLink="!#" class="cursor-pointer font-semibold text-blue-700 hover:text-blue-900">load
+                        more...</a>
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 </section>
