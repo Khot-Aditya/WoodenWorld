@@ -1,3 +1,4 @@
+import { signedIn } from './../../app.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationDrawerComponent implements OnInit {
 
-  signedIn: boolean = true;
+
+  getLogin(){
+    return signedIn
+  }
 
   constructor() {
   }

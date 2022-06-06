@@ -8,8 +8,18 @@ html {
   @apply overflow-x-hidden;
 }
 
-.scroll-snap{
-  scroll-snap-type: x mandatory;
+.button-cta {
+  @apply w-fit bg-accent-600 px-4 py-2 rounded text-white hover:bg-accent-500 active:bg-accent-600;
+}
+
+.header-menu {
+  @apply ml-5;
+}
+.header-menu li i {
+  @apply text-base;
+}
+.header-menu li {
+  @apply flex flex-col items-center justify-center text-xs space-y-1 space-x-2 text-gray-600 hover:!text-accent-600 cursor-pointer;
 }
 
 .scroll-button {
@@ -17,7 +27,7 @@ html {
 }
 
 .carousel-items {
-  @apply min-w-[10rem] lg:min-w-[24rem] h-24 lg:h-60 rounded;
+  @apply min-w-[10rem] lg:min-w-[24rem] h-24 lg:h-60 rounded object-cover;
 }
 
 .carousel-container {

@@ -8,15 +8,15 @@
 
         <div class="flex items-center">
             <div class="shrink-0 rounded-full bg-gray-50">
-                <img [src]="getAccountInfo().avatar" class="rounded-full w-11" alt="Avatar" *ngIf="signedIn" />
+                <img [src]="getAccountInfo().avatar" class="rounded-full w-11" alt="Avatar" *ngIf="getLogin()" />
 
-                <i class="fi fi-br-user text-2xl text-gray-600 p-3" *ngIf="!signedIn"></i>
+                <i class="fi fi-br-user text-2xl text-gray-600 p-3" *ngIf="!getLogin()"></i>
             </div>
             <div class="grow ml-3">
-                <p class="text-base font-light text-gray-100" *ngIf="!signedIn">
+                <p class="text-base font-light text-gray-100" *ngIf="!getLogin()">
                     <a href="#">Hello, Sign in</a>
                 </p>
-                <p class="text-base font-light text-gray-100" *ngIf="signedIn">{{getAccountInfo().name}}</p>
+                <p class="text-base font-light text-gray-100" *ngIf="getLogin()">{{getAccountInfo().name}}</p>
             </div>
         </div>
 
@@ -82,7 +82,7 @@
             </li>
 
             <li class="list-hover justify-between">
-                <span [innerHTML]="signedIn? 'Sign out' : 'Sign in'"></span> <i class="fi fi-br-caret-right"></i>
+                <span [innerHTML]="getLogin()? 'Sign out' : 'Sign in'"></span> <i class="fi fi-br-caret-right"></i>
             </li>
         </ul>
 

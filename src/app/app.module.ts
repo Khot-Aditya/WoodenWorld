@@ -9,6 +9,7 @@ import { HeaderNavigationBarComponent } from './components/header-navigation-bar
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { FooterNavigationBarComponent } from './components/footer-navigation-bar/footer-navigation-bar.component';
 import { FormsModule } from '@angular/forms';
+import { LoginDrawerComponent } from './components/login-drawer/login-drawer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     NavigationDrawerComponent,
     HeaderNavigationBarComponent,
     ShoppingCartComponent,
-    FooterNavigationBarComponent
+    FooterNavigationBarComponent,
+    LoginDrawerComponent
   ],
   imports: [
     BrowserModule,
