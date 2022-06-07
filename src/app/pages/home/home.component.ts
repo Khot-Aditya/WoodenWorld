@@ -18,40 +18,32 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.doStuff();
     }));
   }
+  ngOnInit(): void {
+    setInterval(() => {
+      switch (this.i) {
+        case 0:
+          this.heroImage.nativeElement.src = '../../../assets/images/Frame-6.png'
+          this.i++;
+          break;
 
-  // repeat with the interval of 2 seconds
-  timerId = setInterval(() => this.replaceHeroImage(), 5000);
+        case 1:
+          this.heroImage.nativeElement.src = '../../../assets/images/Frame-7.png'
+          this.i++;
+          break;
+
+        case 2:
+          this.heroImage.nativeElement.src = '../../../assets/images/Frame-5.png'
+          this.i = 0;
+          break;
+
+      }
+    }, 5000);
+  }
 
   ngAfterViewInit() {
 
   }
 
-  replaceHeroImage() {
-
-
-
-    switch (this.i) {
-      case 0:
-        this.heroImage.nativeElement.src = '../../../assets/images/Frame-6.png'
-        this.i++;
-        break;
-
-      case 1:
-        this.heroImage.nativeElement.src = '../../../assets/images/Frame-7.png'
-        this.i++;
-        break;
-
-      case 2:
-        this.heroImage.nativeElement.src = '../../../assets/images/Frame-5.png'
-        this.i = 0;
-        break;
-
-    }
-  }
-
-  ngOnInit(): void {
-
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll(div: any) {

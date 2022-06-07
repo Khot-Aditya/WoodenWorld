@@ -9,16 +9,13 @@ import { Location } from '@angular/common';
 export class LoginComponent implements OnInit {
 
   imageUrl: string = '';
+  isRegistered:boolean = false;
 
   constructor(private _location: Location) {
-
-
 
   }
 
   ngOnInit(): void {
-
-    console.log('init')
 
     var imageArray: string[] = [
       'https://images.unsplash.com/photo-1615874694520-474822394e73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
@@ -37,11 +34,11 @@ export class LoginComponent implements OnInit {
       'https://images.unsplash.com/photo-1429709535771-15665442d6b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
     ];
 
-    this.imageUrl = imageArray[Math.floor((Math.random() * imageArray.length) + 1)]
+    this.imageUrl = imageArray[Math.floor(Math.random() * imageArray.length)]
 
   }
 
-  back() {
+  goBack() {
     this._location.back();
   }
 }
