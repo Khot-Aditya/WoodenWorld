@@ -76,21 +76,21 @@
 <!-- carousel section -->
 <section class="min-h-fit">
 
-    <div class="carousel-container" [scrollLeft]="scrollValue - div1.offsetTop + 1000" #div1>
+    <div class="carousel-container" #div1>
 
         <div *ngFor="let url of getImages()">
             <img [src]="url" alt="" class="carousel-items">
         </div>
 
     </div>
-    <div class="carousel-container" [scrollLeft]="-scrollValue + 1500" #div2>
+    <div class="carousel-container" #div2>
 
         <div *ngFor="let url of getImages2()">
             <img [src]="url" alt="" class="carousel-items">
         </div>
 
     </div>
-    <div class="carousel-container" [scrollLeft]="scrollValue - div1.offsetTop + 1200" #div3>
+    <div class="carousel-container" #div3>
 
         <div *ngFor="let url of getImages3()">
             <img [src]="url" alt="" class="carousel-items">

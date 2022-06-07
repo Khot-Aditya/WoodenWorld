@@ -1,3 +1,25 @@
+
+PAGES
+
+    -home page
+    -login page
+    -settings page
+    -account page
+
+    -ADMIN
+        -manage products page
+        -view orders page
+        -manage site page
+        -manage customers page
+        -manage reviews page
+        -manage support requests page
+        
+    -USERS
+        -manage cart page
+        -explore page
+    	-support page
+
+
 Todo
     -Nav drawer
     -Footer 

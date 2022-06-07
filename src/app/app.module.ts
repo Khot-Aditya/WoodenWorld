@@ -10,6 +10,7 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 import { FooterNavigationBarComponent } from './components/footer-navigation-bar/footer-navigation-bar.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { AccountComponent } from './pages/account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './pages/login/login.component';
     HeaderNavigationBarComponent,
     ShoppingCartComponent,
     FooterNavigationBarComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

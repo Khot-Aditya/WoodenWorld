@@ -10,16 +10,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   // mySubscription: Subscription;
 
-  @ViewChild('heroImage')
-  heroImage!: ElementRef;
+  @ViewChild('heroImage') heroImage!: ElementRef;
+  @ViewChild('div1') carouselScroll1!: ElementRef;
+  @ViewChild('div2') carouselScroll2!: ElementRef;
+  @ViewChild('div3') carouselScroll3!: ElementRef;
+
+
   private i: number = 0;
-  scrollValue: number = 0;
 
   testimonialsArray: any[] = [];
 
   constructor() {
     // this.mySubscription = interval(5000).subscribe((x => {
-    //   this.doStuff();
+    //   //do stuff
     // }));
 
     $.getJSON("../../../assets/json/products.json", (productJson) => {
@@ -44,6 +47,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     });
 
   }
+
   ngOnInit(): void {
     setInterval(() => {
       switch (this.i) {
@@ -66,20 +70,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 5000);
 
     window.addEventListener('scroll', (s: any) => {
-      this.scrollValue = s.srcElement.scrollingElement.scrollTop;
+      var scrollValue = s.srcElement.scrollingElement.scrollTop;
+      this.carouselScroll1.nativeElement.scrollLeft = scrollValue - this.carouselScroll1.nativeElement.offsetTop + 1000;
+      this.carouselScroll2.nativeElement.scrollLeft = -scrollValue + 1500;
+      this.carouselScroll3.nativeElement.scrollLeft = scrollValue - this.carouselScroll3.nativeElement.offsetTop + 1200;
     }, true);
   }
 
   ngAfterViewInit() {
-
-  }
-
-  getScrollValue() {
-    return this.scrollValue;
-  }
-
-  // unused function
-  doStuff() {
 
   }
 
