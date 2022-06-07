@@ -18,7 +18,7 @@ PAGES
         -manage cart page
         -explore page
     	-support page
-
+    	-about
 
 Todo
     -Nav drawer

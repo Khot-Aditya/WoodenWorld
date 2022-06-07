@@ -5,11 +5,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { AccountComponent } from './pages/account/account.component';
 
 const routes: Routes = [
+
+  { path: 'account/sign-in', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: 'account/sign-up', redirectTo: '/sign-up', pathMatch: 'full' },
+  { path: 'account/sign-out', redirectTo: '/sign-out', pathMatch: 'full' },
+
   { path: '', component: HomeComponent },
-  { path: 'users/login', component: AccountComponent },
-  { path: 'users/register', component: AccountComponent },
-  { path: 'users/sign-out', component: AccountComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'account', component: AccountComponent },
+  { path: 'sign-in', component: LoginComponent },
+  { path: 'sign-up', component: LoginComponent },
+  { path: 'sign-out', component: AccountComponent }
 ];
 
 @NgModule({

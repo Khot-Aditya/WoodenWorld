@@ -1,4 +1,4 @@
-<!-- change show class to invisiable after debuging -->
+<!-- change show class to invisible after debugging -->
 <div class="offcanvas offcanvas-start fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-accent-600 top-0 left-0 border-none w-96"
     tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <!-- head -->
@@ -84,7 +84,7 @@
             <li class="list-hover justify-between">
                 <a routerLink="/account/sign-out" *ngIf="getLogin()" class="w-full">Sign out</a> <i *ngIf="getLogin()"
                     class="fi fi-br-caret-right"></i>
-                <a routerLink="/account/login" *ngIf="!getLogin()" class="w-full">Sign in</a> <i *ngIf="!getLogin()"
+                <a routerLink="/account/sign-in" *ngIf="!getLogin()" class="w-full">Sign in</a> <i *ngIf="!getLogin()"
                     class="fi fi-br-caret-right"></i>
             </li>
         </ul>

@@ -9,7 +9,7 @@ export class AccountComponent implements OnInit {
 
   constructor(private router: Router) {
 
-    console.log(this.router.url)
+    console.log(this.router.serializeUrl)
 
     // this.router.navigate(['login']);
    }
