@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginDrawerComponent } from './login-drawer.component';
+import { LoginDrawerComponent } from './login.component';
 
 describe('LoginDrawerComponent', () => {
   let component: LoginDrawerComponent;
