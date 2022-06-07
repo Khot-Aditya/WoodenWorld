@@ -8,15 +8,41 @@ import { interval, Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  mySubscription: Subscription;
+  // mySubscription: Subscription;
+
   @ViewChild('heroImage')
   heroImage!: ElementRef;
-  i: number = 0;
+  private i: number = 0;
+  scrollValue: number = 0;
+
+  testimonialsArray: any[] = [];
 
   constructor() {
-    this.mySubscription = interval(5000).subscribe((x => {
-      this.doStuff();
-    }));
+    // this.mySubscription = interval(5000).subscribe((x => {
+    //   this.doStuff();
+    // }));
+
+    $.getJSON("../../../assets/json/products.json", (productJson) => {
+      $.getJSON("../../../assets/json/testimonials.json", (testimonialsJson) => {
+
+        this.testimonialsArray = [
+          {
+            "testimonial": testimonialsJson[101],
+            "thumbnail": productJson[testimonialsJson[101].product_id].image
+          },
+          {
+            "testimonial": testimonialsJson[102],
+            "thumbnail": productJson[testimonialsJson[102].product_id].image
+          },
+          {
+            "testimonial": testimonialsJson[103],
+            "thumbnail": productJson[testimonialsJson[103].product_id].image
+          }
+        ];
+      });
+
+    });
+
   }
   ngOnInit(): void {
     setInterval(() => {
@@ -38,18 +64,23 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
       }
     }, 5000);
+
+    window.addEventListener('scroll', (s: any) => {
+      this.scrollValue = s.srcElement.scrollingElement.scrollTop;
+    }, true);
   }
 
   ngAfterViewInit() {
 
   }
 
+  getScrollValue() {
+    return this.scrollValue;
+  }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll(div: any) {
-    const offset = div.offsetTop;
-    const scroll = document.documentElement.scrollTop;
-    return scroll - offset + 1000;
+  // unused function
+  doStuff() {
+
   }
 
   getList() {
@@ -123,7 +154,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "https://images.unsplash.com/photo-1616464916356-3a777b2b60b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1616627561749-32636109e0b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1616627988031-f912e383aebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1616464916265-68fc457bdc70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -135,62 +166,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
       "https://images.unsplash.com/photo-1616627686779-4c283d92766e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "https://images.unsplash.com/photo-1616627561749-32636109e0b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     ];
-  }
-
-  doStuff() {
-
-  }
-
-  getTestimonials() {
-    let s1: string = '';
-    let s2: string = '';
-    let s3: string = '';
-
-
-    // $.getJSON("../../../assets/json/products.json", function (json:any) {
-    //   var products = json;
-
-
-    //   $.getJSON("../../../assets/json/testimonials.json", function (json:any) {
-    //     var testimonials = json;
-
-    //     console.log(products[testimonials[1].product_id].image);
-    //   });
-    // });
-
-    // ---------------------------------
-    // const xmlhttp = new XMLHttpRequest();
-    // xmlhttp.onload = function () {
-    //   testimonials = JSON.parse(this.responseText);
-    // };
-    // xmlhttp.open("GET", "../../../assets/json/testimonials.json");
-    // xmlhttp.send();
-
-    // // ---------------------------------
-    // const xmlhttp2 = new XMLHttpRequest();
-    // xmlhttp.onload = function () {
-    //   products = JSON.parse(this.responseText);
-    // };
-    // xmlhttp2.open("GET", "../../../assets/json/products.json");
-    // xmlhttp2.send();
-
-
-    // console.log(testimonials[0].title)
-    // console.log(list.price)
-
-
-    // console.log("-------------------------------")
-    // Object.keys(list).forEach(function (key) {
-
-
-    //     console.log('Key : ' + key + ', Value : ' + list.name)
-    // })
-
-    s1 = '{ "title":"' + "Value for money" + '", "imageUrl":"' + "https://images.unsplash.com/photo-1550226891-ef816aed4a98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1093&q=80" + '","description":"I like the product very much. It is very useful and a must buy product. I will recommend to everyone to go for this." },'
-    s2 = '{ "title":"Nice finishing", "imageUrl":"https://images.unsplash.com/photo-1616627781431-23b776aad6b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1093&q=80","description":"I have kept this in my hall it gives a wonderful look to my room and also I can clean it smoothly because the finishing of the product is too good." },'
-    s3 = '{ "title":"Impressed with the product", "imageUrl":"https://images.unsplash.com/photo-1616627687285-a0dec970e4fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2045&q=80","description":"Cushion quality is good, fabric & color is also good. Exactly same as shown in picture. Recommended." }'
-
-
-    return JSON.parse('[' + s1 + s2 + s3 + ']');
   }
 }

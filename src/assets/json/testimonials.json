@@ -1,26 +1,23 @@
-[
-    {
-        "review_id": 101,
+{
+    "101":{
         "customer_id": 1001,
         "title": "Value for money",
         "description": "I like the product very much. It is very useful and a must buy product. I will recommend to everyone to go for this.",
         "rating": 5,
         "product_id": 1101
     },
-    {
-        "review_id": 102,
+    "102":{
         "customer_id": 1002,
         "title": "Nice finishing",
         "description": "I have kept this in my hall it gives a wonderful look to my room and also I can clean it smoothly because the finishing of the product is too good. ",
         "rating": 5,
         "product_id": 1102
     },
-    {
-        "review_id": 103,
+    "103":{
         "customer_id": 1003,
         "title": "Impressed with the product",
         "description": "Cushion quality is good, fabric & color is also good. Exactly same as shown in picture. Recommended.",
         "rating": 5,
         "product_id": 1103
     }
-]
+}

@@ -49,7 +49,8 @@
             </defs>
         </svg>
 
-        <img src="../../../assets/images/Frame-5.png" alt="" class="w-80 lg:w-96 absolute animate-fade-in-out" #heroImage/>
+        <img src="../../../assets/images/Frame-5.png" alt="" class="w-80 lg:w-96 absolute animate-fade-in-out"
+            #heroImage />
     </div>
 
     <div class="hidden lg:absolute bottom-5 lg:flex flex-col items-center">
@@ -75,21 +76,21 @@
 <!-- carousel section -->
 <section class="min-h-fit">
 
-    <div class="carousel-container" [scrollLeft]="onWindowScroll(div1)" #div1>
+    <div class="carousel-container" [scrollLeft]="scrollValue - div1.offsetTop + 1000" #div1>
 
         <div *ngFor="let url of getImages()">
             <img [src]="url" alt="" class="carousel-items">
         </div>
 
     </div>
-    <div class="carousel-container" [scrollLeft]="-onWindowScroll(div2) + 1500" #div2>
+    <div class="carousel-container" [scrollLeft]="-scrollValue + 1500" #div2>
 
         <div *ngFor="let url of getImages2()">
             <img [src]="url" alt="" class="carousel-items">
         </div>
 
     </div>
-    <div class="carousel-container" [scrollLeft]="onWindowScroll(div3)" #div3>
+    <div class="carousel-container" [scrollLeft]="scrollValue - div1.offsetTop + 1200" #div3>
 
         <div *ngFor="let url of getImages3()">
             <img [src]="url" alt="" class="carousel-items">
@@ -99,8 +100,6 @@
 
 
 </section>
-
-
 
 <!-- offers section -->
 <section class="flex justify-center items-center flex-col py-20">
@@ -241,7 +240,8 @@
 
 
                 <div class="flex space-x-3 mb-2 mt-2">
-                    <button class="w-full h-fit text-center py-2 border rounded text-accent-600 hover:bg-orange-50 active:bg-orange-100 hoverbg-gray-50">
+                    <button
+                        class="w-full h-fit text-center py-2 border rounded text-accent-600 hover:bg-orange-50 active:bg-orange-100 hoverbg-gray-50">
                         Add to cart
                     </button>
                 </div>
@@ -270,9 +270,9 @@
 
     <div class="w-full flex flex-wrap justify-center">
         <div class="flex flex-col w-96 rounded-lg bg-white shadow-lg m-5"
-            *ngFor="let testimonials of getTestimonials()">
+            *ngFor="let testimonials of testimonialsArray">
             <div class="w-96 h-80 relative text-white">
-                <img class="w-96 h-80 absolute object-cover rounded-t-lg" src="{{testimonials.imageUrl}}" alt="" />
+                <img class="w-96 h-80 absolute object-cover rounded-t-lg" src="{{testimonials.thumbnail}}" alt="" />
 
                 <span
                     class="absolute bottom-0 right-0 text-sm m-3 py-2 px-4 border-2 rounded-full flex items-center cursor-pointer hover:bg-white hover:text-gray-800 hover:border-white transition duration-150 ease-in-out backdrop-blur-sm ">
@@ -282,7 +282,7 @@
             </div>
 
             <div class="p-6 flex flex-col justify-start">
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{testimonials.title}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2">{{testimonials.testimonial.title}}</h5>
 
                 <div class="mb-1 space-x-2 flex items-center">
 
@@ -339,7 +339,7 @@
 
                 <p class="text-accent-600 text-xs mb-1"> Verified Purchase</p>
                 <p class="text-gray-700 text-base mb-4 font-sans">
-                    {{testimonials.description}}
+                    {{testimonials.testimonial.description}}
                     <a routerLink="!#" class="cursor-pointer font-semibold text-blue-700 hover:text-blue-900">load
                         more...</a>
                 </p>
@@ -667,4 +667,3 @@
 
 
 <app-footer-navigation-bar></app-footer-navigation-bar>
-
