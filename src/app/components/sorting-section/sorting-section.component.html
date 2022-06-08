@@ -1,0 +1,136 @@
+<div class="w-full min-h-full ">
+
+    <ul class="text-sm font-normal py-3 h-screen overflow-y-scroll">
+
+        <!-- sort by -->
+        <li>
+            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
+                <h2 class="text-xl font-medium">
+                    Sort by
+                </h2>
+                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
+            </div>
+
+            <div *ngFor="let sortBy of getSortByValues()" class="ml-10">
+                <div class="flex items-center my-2">
+                    <input
+                        class="form-check-input appearance-none rounded-full h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="radio" name="sortBy" [id]="sortBy.value" [checked]="sortBy.value === 'relevance'">
+                    <label [for]="sortBy.value">{{sortBy.title}}</label>
+                </div>
+            </div>
+        </li>
+
+        <!-- sort by brand -->
+        <li>
+            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
+                <h2 class="text-xl font-medium">
+                    Brands
+                </h2>
+                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
+            </div>
+
+
+            <div *ngFor="let filterBrand of getBrandNames()" class="ml-10">
+                <div class="flex items-center my-2">
+                    <input
+                        class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="checkbox" name="sortBy" [id]="filterBrand">
+                    <label [for]="filterBrand">{{filterBrand}}</label>
+                </div>
+            </div>
+
+        </li>
+
+        <!-- sort by price -->
+        <li>
+            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
+                <h2 class="text-xl font-medium">
+                    Brands
+                </h2>
+                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
+            </div>
+
+
+            <div *ngFor="let filterBrand of getPrices()" class="ml-10">
+                <div class="flex items-center my-2">
+                    <input
+                        class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="checkbox" name="sortBy" [id]="filterBrand">
+                    <label [for]="filterBrand">{{filterBrand}}</label>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+    <!-- 
+
+Price
+    Under ₹ 6,000
+    ₹ 6,000 to ₹ 10,000 
+    ₹ 10,000 to ₹ 20,000 
+    Over ₹ 20,000 
+
+Dimension
+    Height 10 in - 44 in
+    Width 15 in - 54 in
+    Depth 13 in - 54 in
+
+Style
+    Modern 
+    Contemporary 
+    Traditional 
+    Transitional 
+    Industrial 
+    Mid Century 
+    Eclectic 
+    Indian Ethnic 
+    Mid-Century Modern 
+
+Primary Material
+    Engineered Wood 
+    Sheesham Wood 
+    Mango Wood 
+    Metal 
+    Glass 
+    Iron 
+    Acacia Wood 
+    Teak Wood 
+    Rubber Wood 
+    Plastic 
+    Steel 
+    Marble 
+    Solid Wood 
+    Reclaimed Wood 
+    Wood 
+    Beech Wood 
+    Oak Wood 
+    Fabric 
+    MDF 
+    MDF with Veneer 
+    Pine Wood 
+    Ply Wood 
+    Stone 
+    Leatherette 
+    Velvet Fabric 
+    Wicker/Rattan 
+    Top Material
+    Solid Wood 
+    Engineered Wood 
+    Glass 
+    Marble 
+    Plastic 
+    Stone 
+    Rubber Wood 
+    Metal 
+    MDF with Veneer 
+    Cane 
+    Fabric 
+    Wicker 
+
+Discount
+
+            
+     -->
+</div>

@@ -27,9 +27,9 @@
 
                     <li class="my-nav-menu nav-item dropdown static">
 
-                        <a href="#" data-mdb-ripple="true" data-mdb-ripple-color="light" type="button"
+                        <a routerLink="/explore" data-mdb-ripple="true" data-mdb-ripple-color="light" type="button"
                             id="dropdownMenuButtonY" data-bs-toggle="dropdown" aria-expanded="false">
-                            Products
+                            Explore
                         </a>
 
                         <div class="dropdown-menu w-full mt-0 hidden shadow-lg bg-white absolute left-0 top-full"
@@ -130,11 +130,11 @@
                 <input type="search"
                     class="form-control hidden md:block relative flex-auto min-w-0 w-full px-2 py-1 xl:px-3 xl:py-1.5 text-sm xl:text-base font-light  text-gray-700 bg-gray-100 border-gray-300 rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white border-none focus:outline-none"
                     placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                <button
+                <a routerLink="/explore"
                     class="btn inline-block px-4 py-2 xl:px-6 xl:py-2.5 md:bg-accent-500 text-black md:text-white font-medium text-xs leading-tight uppercase rounded-full md:rounded-l-none md:rounded-r md:border-none border-[1px] md:hover:bg-accent-600 md:hover:shadow-lg md:focus:bg-accent-600 md:focus:outline-none md:focus:ring-0 md:active:bg-accent-600 md:active:shadow-lg transition duration-150 ease-in-out items-center"
                     type="button" id="button-addon2">
                     <i class="fi fi-br-search"></i>
-                </button>
+                </a>
             </div>
 
             <a *ngIf="!getLogin()" routerLink="/account/sign-in"

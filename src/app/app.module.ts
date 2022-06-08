@@ -11,6 +11,8 @@ import { FooterNavigationBarComponent } from './components/footer-navigation-bar
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
+import { ExploreComponent } from './pages/explore/explore.component';
+import { SortingSectionComponent } from './components/sorting-section/sorting-section.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AccountComponent } from './pages/account/account.component';
     ShoppingCartComponent,
     FooterNavigationBarComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    ExploreComponent,
+    SortingSectionComponent
   ],
   imports: [
     BrowserModule,

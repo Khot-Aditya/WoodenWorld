@@ -1,0 +1,57 @@
+<app-header-navigation-bar></app-header-navigation-bar>
+<article class="mt-20">
+    <div class="w-full xl:hidden flex justify-between px-4">
+        <div class="flex justify-start">
+
+            <button
+                class="dropdown-toggle px-4 py-2.5 text-gray-800 font-medium text-xs leading-tight rounded border flex items-center whitespace-nowrap"
+                type="button" id="dropdownMenuButton1d" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fi fi-br-marker mr-2"></i> S75 2SU Palm St, Ba...
+                <i class="fi fi-br-caret-down ml-2"></i>
+            </button>
+            <ul class="dropdown-menu  absolute bg-white text-base z-50 float-left py-2  list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
+                aria-labelledby="dropdownMenuButton1d">
+                <li>
+                    <a class="dropdown-item text-sm py-2 px-4 font-normal block max-w-full bg-transparent text-gray-700 hover:bg-gray-100"
+                        href="#">S75 2SU Palm St, Barnsley, United Kingdom</a>
+                </li>
+                <hr class="h-0 my-2 border border-solid border-t-0 border-gray-700 opacity-25" />
+                <li>
+                    <a class="dropdown-item flex text-sm py-2 px-4 font-normal w-full whitespace-nowrap bg-transparent text-gray-700"
+                        href="#">
+                        <i class="fi fi-br-apps mr-3"></i>
+                        Manage address
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <button
+            class="flex items-center px-4 py-2.5 text-gray-800 text-xs leading-tight rounded border transition duration-150 ease-in-out"
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            <i class="fi fi-br-filter mr-2"></i> Filter
+        </button>
+    </div>
+
+    <div class="offcanvas offcanvas-bottom fixed bottom-0 flex flex-col max-w-lg bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 left-0 right-0 border-none h-5/6 max-h-full"
+        tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <!-- header -->
+        <div class="offcanvas-header flex items-center justify-between p-4">
+            <h5 class="offcanvas-title mb-0 leading-normal font-semibold" id="offcanvasBottomLabel">
+                Filters
+            </h5>
+            <button type="button"
+                class="btn-close box-content w-4 h-4 p-2 -my-5 -mr-2 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <!-- body -->
+        <app-sorting-section class="offcanvas-body flex-grow p-4 overflow-y-auto"></app-sorting-section>
+    </div>
+
+
+    <app-sorting-section class="h-full w-96 border min-h-screen hidden xl:block"></app-sorting-section>
+
+</article>
+<app-footer-navigation-bar></app-footer-navigation-bar>
