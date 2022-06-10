@@ -31,6 +31,37 @@ Todo
 // add replace tags with searchTags and add tags as [best sellers, new arrivals, in offer]
 
 
+MRP     =   69,999
+OFFER   =   25%
+TAXES   =   287
+
+SAVINGS =   MRP     *   OFFER   /   100     +   TAXES
+17,786  =   69,999  *   25      /   100     +   287
+
+PRICE   =   MRP     -   SAVINGS
+52,213  =   69,999  -   17,786
+
+
+
+
+
+
+
+
+
+product
+    product_id
+    name
+    brand
+    mrp
+    dimension
+    style
+    material
+    Discount
+    Released date
+    is_best_seller
+    is_new_released
+
 
 DATABASE
 

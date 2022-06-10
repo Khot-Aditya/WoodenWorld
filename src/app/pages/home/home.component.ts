@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { ProductModel } from 'src/app/ProductModel';
 
 @Component({
   selector: 'app-home',
@@ -92,17 +92,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   getBestSellers() {
+    var productModel = new ProductModel();
+    productModel.name = "Kaylee 3 Seater Velvet Sofa In Blush Pink Color (40% off)";
+    
     return [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10"
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel
     ]
   }
 

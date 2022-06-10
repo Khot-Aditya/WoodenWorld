@@ -13,6 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { SortingSectionComponent } from './components/sorting-section/sorting-section.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SortingSectionComponent } from './components/sorting-section/sorting-se
     LoginComponent,
     AccountComponent,
     ExploreComponent,
-    SortingSectionComponent
+    SortingSectionComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
