@@ -9,10 +9,6 @@ import { ProductModel } from 'src/app/ProductModel';
 export class ExploreComponent implements OnInit {
 
   constructor() {
-
-    $.getJSON("../../../assets/json/products.json", (productJson) => {
-
-    });
   }
 
   ngOnInit(): void {

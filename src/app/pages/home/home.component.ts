@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ProductModel } from 'src/app/ProductModel';
 
 @Component({
@@ -6,7 +6,7 @@ import { ProductModel } from 'src/app/ProductModel';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 
   // mySubscription: Subscription;
 
@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   testimonialsArray: any[] = [];
 
   constructor() {
-    // this.mySubscription = interval(5000).subscribe((x => {
-    //   //do stuff
+    // interval(5000).subscribe((x => {
+
     // }));
 
     $.getJSON("../../../assets/json/products.json", (productJson) => {
@@ -44,6 +44,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
         ];
       });
 
+    });
+
+
+
+    window.addEventListener('scroll', (s: any) => {
+      var scrollValue = window.scrollY;
+
+      // var scrollValue = s.srcElement.scrollingElement.scrollTop;
+      this.carouselScroll1.nativeElement.scrollLeft = scrollValue - this.carouselScroll1.nativeElement.offsetTop + 1000;
+      this.carouselScroll2.nativeElement.scrollLeft = -scrollValue + 1500;
+      this.carouselScroll3.nativeElement.scrollLeft = scrollValue - this.carouselScroll3.nativeElement.offsetTop + 1200;
     });
 
   }
@@ -68,17 +79,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
       }
     }, 5000);
-
-    window.addEventListener('scroll', (s: any) => {
-      var scrollValue = s.srcElement.scrollingElement.scrollTop;
-      this.carouselScroll1.nativeElement.scrollLeft = scrollValue - this.carouselScroll1.nativeElement.offsetTop + 1000;
-      this.carouselScroll2.nativeElement.scrollLeft = -scrollValue + 1500;
-      this.carouselScroll3.nativeElement.scrollLeft = scrollValue - this.carouselScroll3.nativeElement.offsetTop + 1200;
-    }, true);
-  }
-
-  ngAfterViewInit() {
-
   }
 
   getList() {
@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   getBestSellers() {
     var productModel = new ProductModel();
     productModel.name = "Kaylee 3 Seater Velvet Sofa In Blush Pink Color (40% off)";
-    
+
     return [
       productModel,
       productModel,

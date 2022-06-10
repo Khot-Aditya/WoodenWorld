@@ -31,7 +31,7 @@ html {
 }
 
 .carousel-container {
-  @apply flex overflow-x-hidden space-x-5 my-5 scroll-smooth;
+  @apply flex overflow-x-hidden space-x-5 my-5  scroll-smooth;
 }
 
 .mesh {
