@@ -1,17 +1,17 @@
-<div class="w-full min-h-full ">
+<ul class="text-sm font-normal pl-8 py-5 overflow-y-auto">
 
-    <ul class="text-sm font-normal py-3 h-screen overflow-y-scroll">
+    <!-- sort by -->
+    <li>
+        <div class="py-3 pr-5 flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Sort by
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseSortFilter" role="button" aria-expanded="false" aria-controls="collapseSortFilter"></i>
+        </div>
 
-        <!-- sort by -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Sort by
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
-
-            <div *ngFor="let sortBy of getSortByValues()" class="ml-10">
+        <div class="show" id="collapseSortFilter" class="ml-5">
+            <div *ngFor="let sortBy of getSortByValues()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded-full h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -19,19 +19,24 @@
                     <label [for]="sortBy.value">{{sortBy.title}}</label>
                 </div>
             </div>
-        </li>
+        </div>
+    </li>
 
-        <!-- sort by brand -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Brands
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
+    <!-- sort by brand -->
+    <li>
+
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Brands
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseBrandFilter" role="button" aria-expanded="false" aria-controls="collapseBrandFilter"></i>
+        </div>
 
 
-            <div *ngFor="let filterBrand of getBrandNames()" class="ml-10">
+        <div class="show" id="collapseBrandFilter" class="ml-5">
+
+            <div *ngFor="let filterBrand of getBrandNames()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -39,20 +44,26 @@
                     <label [for]="filterBrand">{{filterBrand}}</label>
                 </div>
             </div>
+        </div>
 
-        </li>
+    </li>
 
-        <!-- sort by price -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Price
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
+    <!-- sort by price -->
+    <li>
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Price
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapsePricesFilter" role="button" aria-expanded="false"
+                aria-controls="collapsePricesFilter"></i>
+        </div>
 
 
-            <div *ngFor="let priceFilter of getPrices()" class="ml-10">
+        <div class="show" id="collapsePricesFilter" class="ml-5">
+
+
+            <div *ngFor="let priceFilter of getPrices()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -60,20 +71,24 @@
                     <label [for]="priceFilter">{{priceFilter}}</label>
                 </div>
             </div>
+        </div>
+    </li>
 
-        </li>
+    <!-- sort by dimensions -->
+    <li>
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Dimensions
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseDimensionsFilter" role="button" aria-expanded="false"
+                aria-controls="collapseDimensionsFilter"></i>
+        </div>
 
-        <!-- sort by dimensions -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Dimensions
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
 
+        <div class="show" id="collapseDimensionsFilter" class="ml-5">
 
-            <div *ngFor="let dimensionFilter of getDimensions()" class="ml-10">
+            <div *ngFor="let dimensionFilter of getDimensions()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -81,20 +96,24 @@
                     <label [for]="dimensionFilter">{{dimensionFilter}}</label>
                 </div>
             </div>
+        </div>
+    </li>
 
-        </li>
+    <!-- sort by Style -->
+    <li>
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Style
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseStylesFilter" role="button" aria-expanded="false"
+                aria-controls="collapseStylesFilter"></i>
+        </div>
 
-        <!-- sort by Style -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Style
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
 
+        <div class="show" id="collapseStylesFilter" class="ml-5">
 
-            <div *ngFor="let stylesFilter of getStyles()" class="ml-10">
+            <div *ngFor="let stylesFilter of getStyles()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -102,20 +121,24 @@
                     <label [for]="stylesFilter">{{stylesFilter}}</label>
                 </div>
             </div>
+        </div>
+    </li>
 
-        </li>
+    <!-- sort by material -->
+    <li>
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Material
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseMaterialFilter" role="button" aria-expanded="false"
+                aria-controls="collapseMaterialFilter"></i>
+        </div>
 
-        <!-- sort by material -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Material
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
 
+        <div class="show" id="collapseMaterialFilter" class="ml-5">
 
-            <div *ngFor="let materialFilter of getMaterial()" class="ml-10">
+            <div *ngFor="let materialFilter of getMaterial()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -123,19 +146,23 @@
                     <label [for]="materialFilter">{{materialFilter}}</label>
                 </div>
             </div>
+        </div>
+    </li>
 
-        </li>
+    <!-- sort by discount -->
+    <li>
+        <div class="py-3  pr-5  flex justify-between items-center">
+            <h2 class="text-xl font-medium">
+                Discounts
+            </h2>
+            <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg" data-bs-toggle="collapse"
+                href="#collapseDiscountsFilter" role="button" aria-expanded="false"
+                aria-controls="collapseDiscountsFilter"></i>
+        </div>
 
-        <!-- sort by discount -->
-        <li>
-            <div class="py-3 pl-8 pr-5  flex justify-between items-center">
-                <h2 class="text-xl font-medium">
-                    Material
-                </h2>
-                <i class="fi fi-br-caret-down mr-2 hover:bg-gray-100 p-2 rounded-lg"></i>
-            </div>
+        <div class="show" id="collapseDiscountsFilter" class="ml-5">
 
-            <div *ngFor="let discountFilter of getDiscounts()" class="ml-10">
+            <div *ngFor="let discountFilter of getDiscounts()">
                 <div class="flex items-center my-2">
                     <input
                         class="form-check-input appearance-none rounded-full h-5 w-5 border border-accent-600 bg-white checked:bg-accent-600 checked:border-accent-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
@@ -143,7 +170,6 @@
                     <label [for]="discountFilter">{{discountFilter}}</label>
                 </div>
             </div>
-
-        </li>
-    </ul>
-</div>
+        </div>
+    </li>
+</ul>
