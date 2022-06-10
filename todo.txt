@@ -34,42 +34,31 @@ Todo
 
 DATABASE
 
+    (done)
     USERS_CREDENTIALS
         -username
         -password
+        -name
+        -phone
+        -email
+        -address_1
+        -address_2
+        -zip_code
         -type
-        -CONTACT
    
     ADMIN
         -index
         -company name
         -company logo
         -gst
-        -CONTACT
-        -ADDRESS
         -USERS_CREDENTIALS
 
     CUSTOMERS
         -index
-        -CONTACT
-        -ADDRESS
         -USERS_CREDENTIALS
         -products
         -quantity
 
-    CONTACT
-        -contact_id
-        -name
-        -phone
-        -email
-    
-    ADDRESS
-        -index
-        -address
-        -pincode
-        -city
-        -state
-        -CONTACT
 
     PRODUCTS
         -index

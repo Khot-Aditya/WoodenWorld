@@ -118,4 +118,83 @@ export class SortingSectionComponent implements OnInit {
     ]
   }
 
+  getDimensions() {
+    return [
+      "Height 10 in - 44 in",
+      "Width 15 in - 54 in",
+      "Depth 13 in - 54 in"
+    ]
+  }
+
+  getStyles() {
+    return [
+      "Modern",
+      "Contemporary",
+      "Traditional",
+      "Transitional",
+      "Industrial",
+      "Mid Century",
+      "Eclectic",
+      "Indian Ethnic",
+      "Mid-Century Modern"
+    ]
+  }
+
+  getMaterial() {
+    return [
+      "Engineered Wood",
+      "Sheesham Wood",
+      "Mango Wood",
+      "Metal",
+      "Glass",
+      "Iron",
+      "Acacia Wood",
+      "Teak Wood",
+      "Rubber Wood",
+      "Plastic",
+      "Steel",
+      "Marble",
+      "Solid Wood",
+      "Reclaimed Wood",
+      "Wood",
+      "Beech Wood",
+      "Oak Wood",
+      "Fabric",
+      "MDF",
+      "MDF with Veneer",
+      "Pine Wood",
+      "Ply Wood",
+      "Stone",
+      "Leatherette",
+      "Velvet Fabric",
+      "Wicker/Rattan",
+      "Top Material",
+      "Solid Wood",
+      "Engineered Wood",
+      "Glass",
+      "Marble",
+      "Plastic",
+      "Stone",
+      "Rubber Wood",
+      "Metal",
+      "MDF with Veneer",
+      "Cane",
+      "Fabric",
+      "Wicker",
+    ]
+  }
+
+  getDiscounts() {
+    return [
+      "10% and Above",
+      "20% and Above",
+      "30% and Above",
+      "40% and Above",
+      "50% and Above",
+      "60% and Above",
+      "70% and Above",
+      "80% and Above",
+      "90% and Above"
+    ]
+  }
 }
