@@ -37,6 +37,16 @@ export class ExploreComponent implements OnInit {
       productModel,
       productModel,
       productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
+      productModel,
       productModel
     ]
   }
