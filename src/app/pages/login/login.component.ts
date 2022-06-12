@@ -10,11 +10,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   imageUrl: string = '';
-  isRegistered: boolean;
 
   constructor(private _location: Location, private router: Router) {
-
-    this.isRegistered = this.router.url === '/sign-in';
 
     var imageArray: string[] = [
       'https://images.unsplash.com/photo-1615874694520-474822394e73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',

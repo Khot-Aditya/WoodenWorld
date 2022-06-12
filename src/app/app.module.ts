@@ -26,6 +26,8 @@ import { ContactUsComponent } from './components/account-components/contact-us/c
 import { HelpComponent } from './components/account-components/help/help.component';
 import { SettingsComponent } from './components/account-components/settings/settings.component';
 import { AccountNavigationComponent } from './components/account-navigation/account-navigation.component';
+import { SigninComponentComponent } from './components/signin-component/signin-component.component';
+import { SignupComponentComponent } from './components/signup-component/signup-component.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { AccountNavigationComponent } from './components/account-navigation/acco
     ContactUsComponent,
     HelpComponent,
     SettingsComponent,
-    AccountNavigationComponent
+    AccountNavigationComponent,
+    SigninComponentComponent,
+    SignupComponentComponent
   ],
   imports: [
     BrowserModule,

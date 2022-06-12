@@ -1,3 +1,6 @@
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { SignupComponentComponent } from './components/signup-component/signup-component.component';
+import { SigninComponentComponent } from './components/signin-component/signin-component.component';
 import { ContactUsComponent } from 'src/app/components/account-components/contact-us/contact-us.component';
 import { HelpComponent } from './components/account-components/help/help.component';
 import { SettingsComponent } from './components/account-components/settings/settings.component';
@@ -17,15 +20,12 @@ import { AccountComponent } from './pages/account/account.component';
 import { AlertsComponent } from './components/account-components/alerts/alerts.component';
 
 const routes: Routes = [
-
-  { path: 'account/sign-in', redirectTo: '/sign-in', pathMatch: 'full' },
-  { path: 'account/sign-up', redirectTo: '/sign-up', pathMatch: 'full' },
-  { path: 'account/sign-out', redirectTo: '/sign-out', pathMatch: 'full' },
-
   { path: '', component: HomeComponent },
+  { path: 'explore', component: ExploreComponent },
   {
     path: 'account', component: AccountComponent, children: [
       { path: 'profile', component: ProfileComponent },
+      { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'manage-orders', component: OrdersComponent },
       { path: 'wishlist', component: WishlistComponent },
       { path: 'address-book', component: AddressBookComponent },
@@ -39,10 +39,12 @@ const routes: Routes = [
 
     ]
   },
-  { path: 'sign-in', component: LoginComponent },
-  { path: 'sign-up', component: LoginComponent },
-  { path: 'sign-out', component: AccountComponent },
-  { path: 'explore', component: ExploreComponent }
+  {
+    path: 'user', component: LoginComponent, children: [
+      { path: 'sign-in', component: SigninComponentComponent },
+      { path: 'sign-up', component: SignupComponentComponent },
+    ]
+  }
 ];
 
 @NgModule({

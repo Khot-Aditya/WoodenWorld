@@ -59,9 +59,8 @@ product
     material
     Discount
     Released date
-    is_best_seller
-    is_new_released
 
+    Database for best sellers
 
 DATABASE
 
@@ -198,8 +197,6 @@ transaction
         quantity
         stock
 
-
-Database Model
 
 
 

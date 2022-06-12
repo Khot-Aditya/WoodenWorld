@@ -1,5 +1,4 @@
 export class ProductModel {
-    // product id
 
     productId!: number;
     thumbnail!: string;

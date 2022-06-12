@@ -8,4 +8,4 @@ export class AppComponent {
   
 }
 
-export const signedIn: boolean = true;
+export const signedIn: boolean = false;
