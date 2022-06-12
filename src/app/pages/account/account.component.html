@@ -1,22 +1,19 @@
 <app-header-navigation-bar></app-header-navigation-bar>
-<div class="mt-20">
 
-    
+<div class="flex flex-nowrap justify-center items-start h-fit w-screen my-20">
+    <div class="w-1/4 min-h-screen overflow-y-auto hidden xl:block">
 
-    <div class="flex flex-nowrap justify-center items-start h-fit w-screen">
-        <div class="w-1/4 border-r min-h-screen overflow-y-auto hidden xl:block bg-purple-50"></div>
 
-        <div class="w-3/4">
+        <app-account-navigation></app-account-navigation>
 
-            <div class="py-10 border-b hidden xl:flex items-center justify-center bg-gray-50">category section</div>
+    </div>
 
-            <div class="flex justify-center mt-10">
+    <div class="w-3/4">
 
-                <div class="w-fit grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-y-10 gap-x-10">
-                    <!-- <app-product-card [productModel]="card" *ngFor="let card of getBestSellers()"></app-product-card> -->
-                </div>
+        <div class="flex justify-center mt-10">
 
-            </div>
+            <router-outlet></router-outlet>
+
         </div>
     </div>
 </div>

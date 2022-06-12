@@ -25,6 +25,7 @@ import { PaymentOptionsComponent } from './components/account-components/payment
 import { ContactUsComponent } from './components/account-components/contact-us/contact-us.component';
 import { HelpComponent } from './components/account-components/help/help.component';
 import { SettingsComponent } from './components/account-components/settings/settings.component';
+import { AccountNavigationComponent } from './components/account-navigation/account-navigation.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { SettingsComponent } from './components/account-components/settings/sett
     PaymentOptionsComponent,
     ContactUsComponent,
     HelpComponent,
-    SettingsComponent
+    SettingsComponent,
+    AccountNavigationComponent
   ],
   imports: [
     BrowserModule,

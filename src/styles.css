@@ -78,3 +78,20 @@ html {
 i {
   @apply flex items-center;
 }
+
+/* account-navigation-component */
+.account-navigation {
+  @apply pl-10 pt-10 space-y-5;
+}
+
+.account-navigation li {
+  @apply border-b py-3 px-2 hover:text-accent-600 flex items-center cursor-pointer
+}
+
+.account-navigation i {
+  @apply text-xs ml-5 invisible
+}
+
+.account-navigation li:hover i {
+  @apply visible
+}
