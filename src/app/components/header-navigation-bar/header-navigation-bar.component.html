@@ -18,7 +18,9 @@
                     aria-controls="offcanvasExample">
                     <i class="fi fi-br-menu-burger"></i>
                 </button>
-                <img src="../../assets/images/logo/logo_regular.svg" alt="hero image" class="w-24 mx-3">
+                <a routerLink="/">
+                    <img src="../../assets/images/logo/logo_regular.svg" alt="company logo" class="w-24 mx-3">
+                </a>
             </div>
 
             <!-- menu -->
@@ -107,17 +109,20 @@
                         </div>
                     </li>
                     <li class="my-nav-menu">
-                        <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Cart</a>
+                        <a routerLink="/account/shopping-cart" data-mdb-ripple="true"
+                            data-mdb-ripple-color="light">Cart</a>
                     </li>
 
                     <li class="my-nav-menu">
-                        <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Support</a>
+                        <a routerLink="/account/contact-us" data-mdb-ripple="true"
+                            data-mdb-ripple-color="light">Support</a>
                     </li>
                     <li class="my-nav-menu">
-                        <a data-mdb-ripple="true" data-mdb-ripple-color="light">About</a>
+                        <a routerLink="" data-mdb-ripple="true" data-mdb-ripple-color="light">About</a>
                     </li>
                     <li class="my-nav-menu">
-                        <a routerLink="/account" data-mdb-ripple="true" data-mdb-ripple-color="light">Account</a>
+                        <a routerLink="/account/profile" data-mdb-ripple="true"
+                            data-mdb-ripple-color="light">Account</a>
                     </li>
                 </ul>
             </div>
@@ -149,20 +154,28 @@
 
             <ul *ngIf="getLogin()" class="flex space-x-4 header-menu">
                 <li>
-                    <i class="fi fi-br-marker"></i>
-                    <p class="">My Orders</p>
+                    <a routerLink="/account/manage-orders">
+                        <i class="fi fi-br-marker"></i>
+                        <p class="">My Orders</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fi fi-br-heart"></i>
-                    <p class="">Wishlist</p>
+                    <a routerLink="/account/wishlist">
+                        <i class="fi fi-br-heart"></i>
+                        <p class="">Wishlist</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fi fi-br-bell-ring"></i>
-                    <p class="">Notification</p>
+                    <a routerLink="/account/alerts">
+                        <i class="fi fi-br-bell-ring"></i>
+                        <p class="">Notification</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fi fi-br-interrogation"></i>
-                    <p class="">Help</p>
+                    <a routerLink="/account/need-help">
+                        <i class="fi fi-br-interrogation"></i>
+                        <p class="">Help</p>
+                    </a>
                 </li>
             </ul>
         </div>

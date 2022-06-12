@@ -8,11 +8,7 @@ import { Router } from '@angular/router';
 export class AccountComponent implements OnInit {
 
   constructor(private router: Router) {
-
-    console.log(this.router.serializeUrl)
-
-    // this.router.navigate(['login']);
-   }
+  }
 
   ngOnInit(): void {
   }

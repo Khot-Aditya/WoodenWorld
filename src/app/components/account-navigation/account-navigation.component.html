@@ -1,35 +1,35 @@
 <ul class="account-navigation">
-    <li>
-        My Profile <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('profile')?'text-accent-600':'text-gray-800'">
+        <a routerLink="profile">My Profile <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Manage Orders <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('manage-orders')?'text-accent-600':'text-gray-800'">
+        <a routerLink="manage-orders">Manage Orders <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Wishlist <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('wishlist')?'text-accent-600':'text-gray-800'">
+        <a routerLink="wishlist">Wishlist <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Address Book <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('address-book')?'text-accent-600':'text-gray-800'">
+        <a routerLink="address-book">Address Book <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Alerts & Emails <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('alerts')?'text-accent-600':'text-gray-800'">
+        <a routerLink="alerts">Alerts & Emails <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        My Reviews <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('my-reviews')?'text-accent-600':'text-gray-800'">
+        <a routerLink="my-reviews">My Reviews <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Recently Viewed <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('recently-viewed')?'text-accent-600':'text-gray-800'">
+        <a routerLink="recently-viewed">Recently Viewed <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Payment Methods <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('payment-methods')?'text-accent-600':'text-gray-800'">
+        <a routerLink="payment-methods">Payment Methods <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Account Settings <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('settings')?'text-accent-600':'text-gray-800'">
+        <a routerLink="settings">Account Settings <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Need Help? <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('need-help')?'text-accent-600':'text-gray-800'">
+        <a routerLink="need-help">Need Help? <i class="fi fi-br-angle-right"></i></a>
     </li>
-    <li>
-        Contact Us <i class="fi fi-br-angle-right"></i>
+    <li [ngClass]="getUrl('contact-us')?'text-accent-600':'text-gray-800'">
+        <a routerLink="contact-us">Contact Us <i class="fi fi-br-angle-right"></i></a>
     </li>
 </ul>
