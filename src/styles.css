@@ -3,80 +3,9 @@
 @tailwind utilities;
 
 html {
-  font-family: "Sora", sans-serif;
-  font-weight: 500;
-  @apply overflow-x-hidden;
+  @apply overflow-x-hidden font-["Sora",sans-serif] font-medium;
 }
 
-.button-cta {
-  @apply w-fit bg-accent-600 px-4 py-2 rounded text-white hover:bg-accent-500 active:bg-accent-600;
-}
-
-.header-menu {
-  @apply ml-5;
-}
-.header-menu li i {
-  @apply text-base;
-}
-.header-menu a {
-  @apply flex flex-col items-center justify-center text-xs space-y-1 space-x-2 text-gray-600 hover:!text-accent-600 cursor-pointer;
-}
-
-.scroll-button {
-  @apply w-10 h-10 cursor-pointer text-black hover:text-white hover:bg-accent-600 m-3 rounded-full flex items-center justify-center transition duration-150 ease-in-out;
-}
-
-.carousel-items {
-  @apply min-w-[10rem] lg:min-w-[24rem] h-24 lg:h-60 rounded object-cover;
-}
-
-.carousel-container {
-  @apply flex overflow-x-hidden space-x-5 my-5  scroll-smooth;
-}
-
-.mesh {
-  @apply bg-gradient-to-br from-[#d0f8ff] via-[#f2fdff] to-[#d0f8ff];
-}
-.hr {
-  @apply ml-9 mr-16 border-gray-100;
-}
-.list {
-  @apply py-3 pl-8 pr-5  flex justify-between items-center;
-}
-.list-hover {
-  @apply hover:bg-gray-100 py-3 mx-5 px-5 rounded-lg cursor-pointer flex;
-}
-
-.list-hover i {
-  @apply invisible;
-}
-
-.list-hover:hover i {
-  @apply visible;
-}
-
-.category-name {
-  @apply text-sm text-center mt-5;
-}
-
-.row {
-  @apply flex flex-col lg:flex-row w-full max-w-5xl py-5 items-center justify-between;
-}
-
-.category-icon {
-  @apply w-20 lg:w-16 h-auto;
-}
-
-.category {
-  @apply w-fit h-fit flex items-center justify-center flex-col hover:text-accent-600 hover:fill-accent-600 transition-colors duration-300 ease-in-out my-5 lg:my-0;
-}
-
-.my-nav-menu {
-  @apply nav-item nav-link block pr-2 lg:px-2 py-2 text-gray-800 hover:text-accent-600  text-sm xl:text-base
-  focus:text-accent-600 transition duration-150 ease-in-out;
-}
 i {
   @apply flex items-center;
 }
-
-

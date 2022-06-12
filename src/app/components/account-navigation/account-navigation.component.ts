@@ -18,7 +18,7 @@ export class AccountNavigationComponent implements OnInit {
   }
 
   getUrl(url: string) {
-    return this.router.url === '/account/' + url
+    return this.router.url === '/account/' + url ? 'text-accent-600' : 'text-gray-800'
   }
 
 }

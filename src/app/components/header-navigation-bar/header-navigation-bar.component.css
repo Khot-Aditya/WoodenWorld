@@ -1,0 +1,14 @@
+.my-nav-menu {
+  @apply nav-item nav-link block pr-2 lg:px-2 py-2 text-gray-800 hover:text-accent-600  text-sm xl:text-base
+    focus:text-accent-600 transition duration-150 ease-in-out;
+}
+
+.header-menu {
+  @apply ml-5;
+}
+.header-menu li i {
+  @apply text-base;
+}
+.header-menu a {
+  @apply flex flex-col items-center justify-center text-xs space-y-1 space-x-2 text-gray-600 hover:!text-accent-600 cursor-pointer;
+}
