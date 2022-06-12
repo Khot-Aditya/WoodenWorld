@@ -14,6 +14,17 @@ import { AccountComponent } from './pages/account/account.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { SortingSectionComponent } from './components/sorting-section/sorting-section.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProfileComponent } from './components/account-components/profile/profile.component';
+import { OrdersComponent } from './components/account-components/orders/orders.component';
+import { ReviewsComponent } from './components/account-components/reviews/reviews.component';
+import { WishlistComponent } from './components/account-components/wishlist/wishlist.component';
+import { HistoryComponent } from './components/account-components/history/history.component';
+import { AlertsComponent } from './components/account-components/alerts/alerts.component';
+import { AddressBookComponent } from './components/account-components/address-book/address-book.component';
+import { PaymentOptionsComponent } from './components/account-components/payment-options/payment-options.component';
+import { ContactUsComponent } from './components/account-components/contact-us/contact-us.component';
+import { HelpComponent } from './components/account-components/help/help.component';
+import { SettingsComponent } from './components/account-components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +38,18 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     AccountComponent,
     ExploreComponent,
     SortingSectionComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProfileComponent,
+    OrdersComponent,
+    ReviewsComponent,
+    WishlistComponent,
+    HistoryComponent,
+    AlertsComponent,
+    AddressBookComponent,
+    PaymentOptionsComponent,
+    ContactUsComponent,
+    HelpComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
